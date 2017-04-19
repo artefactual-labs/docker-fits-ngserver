@@ -1,5 +1,5 @@
 # fits-ngserver
-[![](https://images.microbadger.com/badges/image/artefactual/fits-ngserver.svg)](https://microbadger.com/images/fits-ngserver)
+[![](https://images.microbadger.com/badges/image/artefactual/fits-ngserver.svg)](https://microbadger.com/images/artefactual/fits-ngserver)
 
 `artefactual/fits-ngserver` is an attempt to package the FITS Nailgun server used by Archivematica.
 
