@@ -27,5 +27,5 @@ RUN set -ex \
 	&& useradd -r -g fits fits
 
 USER fits
-
+EXPOSE 2113
 ENTRYPOINT ["/usr/bin/fits-ngserver.sh", "/usr/share/maven-repo/com/martiansoftware/nailgun-server/debian/nailgun-server-debian.jar"]
