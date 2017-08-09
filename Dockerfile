@@ -3,6 +3,9 @@ FROM ubuntu:14.04
 ENV DEBIAN_FRONTEND noninteractive
 ARG FITS_VERSION=0.8.4-1~14.04
 ARG FITS_USER=fits
+ARG FITS_UID=333
+ARG FITS_GROUP=fits
+ARG FITS_GID=333
 
 RUN set -ex \
 	&& apt-get update \
@@ -23,8 +26,8 @@ RUN set -ex \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN set -ex \
-	&& groupadd -r fits \
-	&& useradd -r -g fits fits
+	&& groupadd --system --gid ${FITS_GID} ${FITS_GROUP} \
+	&& useradd --system --uid ${FITS_UID} --gid ${FITS_GID} ${FITS_USER}
 
 USER fits
 EXPOSE 2113
